@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>前期调研</title>
+    <title>P L A N T S</title>
     <style>
         * {
             margin: 0;
@@ -26,10 +26,19 @@
             width: 100vw;
         }
     </style>
+    <script src="./support/tools.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            window.setTimeout(() => {
+                let imgName = getQueryVariable("name");
+                document.querySelector("#displayImg").setAttribute("src", `./imgs/${imgName}`);
+            }, 500);
+        });
+    </script>
 </head>
 
 <body>
-    <img src="./previousIns.png">
+    <img id="displayImg" src="./imgs/public/loading.jpg">
 </body>
 
 </html>
